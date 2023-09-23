@@ -6,7 +6,7 @@ import ReviewoCard from '../reviews/ReviewCard'
 import Link from 'next/link'
 function Storis() {
   return (
-    <div className=' storis storis w-full mt-40 relative'>
+    <div className=' storis  w-full mt-20 overflow-hidden relative'>
         <Image src={im} width={1000} height={1000} className='w-full h-full absolute'/>
         <div className='w-full bg-white opacity-70 h-full absolute z-10'></div>
         <div className=' absolute z-20 h-full w-full flex flex-col justify-center items-center'>

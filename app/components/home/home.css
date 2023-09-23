@@ -10,28 +10,16 @@
     height: 571px;
     opacity: 0.7;
 }
-h2{
-    letter-spacing: 35px;
-}
-h3{
-    letter-spacing: 15px;
-}
 .my-p{
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 700;
     text-transform: uppercase;
     color: rgb(126, 126, 126);
 }
 .p{
-    padding: 20px;
+    padding: 10px;
     transition: all ease-in-out 0.3s;
     border-radius: 10%;
-}
-.p:hover{
-    
-    outline: 10px solid yellow;
-    z-index: 31;
-    transform: scale(1.1);
 }
 .Features-Card{
     width: calc(100% - 40px /4);
@@ -59,4 +47,43 @@ h3{
 }
 .auth-div{
     transform: translateX(-11%);
+}
+@media (min-width: 768px){
+    .h2{
+        letter-spacing: 35px;
+    }
+    .p:hover{
+        outline: 10px solid yellow;
+        z-index: 31;
+        transform: scale(1.1);
+    }
+}
+@media (max-width: 768px){
+    .p:hover{
+        border: 10px solid yellow;
+        z-index: 31;
+    }
+    .storis{
+        height: 1500px;
+    }
+    .auth-overlay{
+        width:95%;
+        height: 70%;
+        transform: translateX(0);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+    .auth-div{
+        transform: translateX(0);
+    }
+}
+@media (max-width: 1024px){
+    .auth-overlay{
+        width:95%;
+        height: 70%;
+        transform: translateX(0);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+    .auth-div{
+        transform: translateX(0);
+    }
 }

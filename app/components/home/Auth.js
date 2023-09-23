@@ -18,9 +18,9 @@ function Auth() {
             
         </div>
         {
-            isMember && true ? (<p className="mt-1  text-center text-sm text-gray-500 -translate-x-20">
+            isMember && true ? (<p className="mt-1  text-center text-sm text-gray-500 md:-translate-x-20">
             Not a member?{' '} <button  className="leading-6 title font-bold" onClick={()=>setIsMember(false)}>Sign up Now</button>
-          </p>):(<p className="mt-1  text-center text-sm text-gray-500 -translate-x-20">
+          </p>):(<p className="mt-1  text-center text-sm text-gray-500 md:-translate-x-20">
           You already have an account?{' '} <button  className="leading-6 title font-bold" onClick={()=>setIsMember(true)}>Login Now</button>
           </p>)
         }

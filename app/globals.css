@@ -88,7 +88,7 @@ background: radial-gradient(circle, #f7ff47 0%, #ffb947 100%);
   -webkit-text-fill-color: transparent;
 }
 .per{
-  perspective:600px;
+  perspective:900px;
 }
 .btn{
   background: -webkit-linear-gradient(#f7ff47, #ffb947);

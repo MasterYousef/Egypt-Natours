@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} `}>
-      <div className=' m-8'>
+      <div className=' lg:m-8 overflow-hidden'>
         <MenuButton/>
         {children}
       </div>

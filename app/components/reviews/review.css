@@ -7,12 +7,10 @@
     transition: all ease-in-out 0.5s;
 }
 .im-hov{
-    top:50%;
-    left:50%;
-    transform:translate(-50%,20%) ;
     text-align: center;
     opacity: 0;
     transition: all ease-in-out 0.5s;
+    transform: translateY(150%);
 }
 .un-Skew{
     transform: skewX(12deg);
@@ -21,6 +19,14 @@
     filter: blur(2px) brightness(80%);
 }
 .card:hover .im-hov{
-    transform: translate(-50%, -50%);
+    transform: translateY(0);
     opacity: 1;
+}
+@media (max-width: 768px){
+    .card{
+        transform: skewX(0)
+    }
+    .un-Skew{
+        transform: skewX(0);
+    }
 }
