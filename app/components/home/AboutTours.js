@@ -7,7 +7,7 @@ import p3 from '@/image/p3.jpg'
 import Link from 'next/link'
 function AboutTours() {
   return (
-    <div className='md:py-20 lg:py-0'>
+    <div className='md:py-20 lg:py-0' id='About-Tours'>
         <Title text="EXCITING TOURS FOR ADVENTUROUS PEOPLE"/>
         <div className=' mt-10 lg:mt-16 flex flex-col  lg:flex-row'>
             <div className='flex w-full lg:w-1/2 me-20 flex-col mb-20 lg:mb-0 h-1/2'>

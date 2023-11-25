@@ -5,17 +5,22 @@ import Image from 'next/image'
 import Tours from './components/home/Tours'
 import Storis from './components/home/Storis'
 import Auth from './components/home/Auth'
-import Footer from './components/utils/Footer'
-export default function Home() {
+import GetUserDataLogic from './logic/GetUserDataLogic'
+ async function Home() {
+  const profile = await GetUserDataLogic()
   return (
     <main className='main'>
       <Landing/>
       <AboutTours/>
       <Features/>
       <Tours/>
-      <Storis/>
-      <Auth/>
-      <Footer/>
+      {
+        profile ? (<Storis/>):null
+      }
+      {
+        profile ? null:(<Auth/>)
+      }
     </main>
   )
 }
+export default Home

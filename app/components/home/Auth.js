@@ -3,8 +3,8 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import im from '@/image/h4.jpg'
 import Title from '../utils/Title'
-import LogIn from './auth/LogIn'
-import SignUp from './auth/SignUp';
+import LogIn from '../auth/LogIn'
+import SignUp from '../auth/SignUp';
 function Auth() {
     const [isMember, setIsMember] = useState(true)
   return (
@@ -19,9 +19,9 @@ function Auth() {
         </div>
         {
             isMember && true ? (<p className="mt-1  text-center text-sm text-gray-500 md:-translate-x-20">
-            Not a member?{' '} <button  className="leading-6 title font-bold" onClick={()=>setIsMember(false)}>Sign up Now</button>
+            Not a member ?{' '} <button  className="leading-6 title font-bold" onClick={()=>setIsMember(false)}>Sign up Now</button>
           </p>):(<p className="mt-1  text-center text-sm text-gray-500 md:-translate-x-20">
-          You already have an account?{' '} <button  className="leading-6 title font-bold" onClick={()=>setIsMember(true)}>Login Now</button>
+          You already have an account ?{' '} <button  className="leading-6 title font-bold" onClick={()=>setIsMember(true)}>Login Now</button>
           </p>)
         }
         </div>

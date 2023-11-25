@@ -1,0 +1,8 @@
+.profile{
+background: #f7ff47;
+background: -webkit-radial-gradient(circle, #f7ff47 0%, #ffb947 100%);
+background: radial-gradient(circle, #f7ff47 0%, #ffb947 100%);
+}
+.im{
+    border-radius: 50%;
+}

@@ -5,7 +5,7 @@ import im from '@/image/h2.jpg'
 import Link from 'next/link'
 function TourCard() {
   return (
-    <div className='tour-card relative w-3/4 mb-48 md:mb-0'>
+    <div className='tour-card relative  mb-48 md:mb-0'>
     <div className='shadow-lg flex flex-col justify-center h-full items-center absolute bg-white md:rounded z-10 card-front w-full overflow-hidden pb-10 '>
         <Image src={im.src} width={1000} height={1000} className=' w-full h-64 card-im'/>
         <div className='card-head font-bold md:text-2xl lg:text-3xl  rounded p-3 top-32'>

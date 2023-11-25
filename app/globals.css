@@ -6,26 +6,55 @@
   padding: 0;
   margin: 0;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 .full-scale{
   scale: 100;
   transition:all 1s;
 }
-.hov1{
-  background-image: linear-gradient(
-    to right,
-    #54b3d6,
-    #54b3d6 50%,
-    #000 50%
-  );
-  background-size: 200% 100%;
-  background-position: -100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.4s ease-in-out;
+.hov1 {
+  letter-spacing: 0;
 }
-.hov1:hover{
-  background-position: 0;
-  transform: scale(1.2);
+
+.hov1 {
+  letter-spacing: 0;
+}
+
+.hov1:hover,
+.hov1:active {
+  letter-spacing: 5px;
+}
+
+.hov1:after,
+.hov1:before {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid rgba(255, 255, 255, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 5px auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+.hov1:hover:after,
+.hov1:hover:before {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-color: #f8b228;
+  transition: width 350ms ease-in-out;
+  width: 100%;
+}
+
+.hov1:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 100%;
 }
 .main{
   background-color: #eee;
@@ -99,4 +128,7 @@ background: radial-gradient(circle, #f7ff47 0%, #ffb947 100%);
 }
 .btn:hover{
   transform: scale(1.2);
+}
+.custom-toast {
+  font-size:15px;
 }

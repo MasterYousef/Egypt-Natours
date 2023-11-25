@@ -1,8 +1,11 @@
 'use client';
-import React from 'react'
-import Title from '../../utils/Title'
+import React, { Fragment } from 'react'
+import Title from '../utils/Title'
 import './auth.css'
+import SignUpLogic from '@/app/logic/auth/SignUpLogic';
+import { Dialog, Transition } from '@headlessui/react';
 function SignUp() {
+  const [isOpen, setIsOpen,HandSubmit] = SignUpLogic()
   return (
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-3 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
@@ -10,7 +13,7 @@ function SignUp() {
         </div>
 
         <div className="mt-5 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form className="space-y-6" action="#" method="POST">
+          <form className="space-y-6" onSubmit={HandSubmit} method="POST" >
           <div>
               <label htmlFor="name" className="block text-sm font-medium leading-6 text-gray-900">
                 Name
@@ -61,7 +64,7 @@ function SignUp() {
             <div>
               <div className="flex items-center justify-between">
                 <label htmlFor="passwordConfirm" className="block text-sm font-medium leading-6 text-gray-900">
-                password Confirm
+                Password Confirm
                 </label>
               </div>
               <div className="mt-2">
@@ -85,6 +88,42 @@ function SignUp() {
             </div>
           </form>
         </div>
+        <Transition appear show={isOpen} as={Fragment}>
+        <Dialog as="div" className="relative z-50" onClose={()=>setIsOpen(false)}>
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-black bg-opacity-25" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4 text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Dialog.Panel className="  transform overflow-hidden rounded-2xl bg-white p-10 text-left align-middle shadow-xl transition-all">
+                <div className=' flex flex-col justify-center items-center'>
+                <i class="fa-solid fa-circle-notch animate-spin text-7xl text-yellow-500 mb-10"></i>
+                <div className='text-5xl'>Loading..<span className='animate-ping'>.</span></div>
+                </div>
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
       </div>
   )
 }
